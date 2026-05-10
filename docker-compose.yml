@@ -1,0 +1,12 @@
+services:
+  freshrss:
+    image: freshrss/freshrss:latest
+    ports:
+      - "8080:80"
+    environment:
+      TZ: Asia/Kolkata
+      CRON_MIN: '*/20'
+      FRESHRSS_INSTALL: |
+        --api-enabled
+      FRESHRSS_USER: admin
+      FRESHRSS_PASSWORD: strongpassword
